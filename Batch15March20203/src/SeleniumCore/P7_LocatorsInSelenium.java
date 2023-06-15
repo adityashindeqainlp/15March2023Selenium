@@ -116,15 +116,15 @@ public class P7_LocatorsInSelenium {
 
 		// Type 5 CSS to identify class
 
-//		List<WebElement> rbuttons = driver.findElements(By.cssSelector(".radioButton"));
-//
-//		for (int i = 0; i <= rbuttons.size(); i++) {
-//
-//			if (i == 3) {
-//
-//				rbuttons.get(i).click();
-//			}
-//		}
+		List<WebElement> rbuttons = driver.findElements(By.cssSelector(".radioButton"));
+
+		for (int i = 0; i <= rbuttons.size(); i++) {
+
+			if (i == 3) {
+
+				rbuttons.get(i).click();
+			}
+		}
 
 		Thread.sleep(2000);
 

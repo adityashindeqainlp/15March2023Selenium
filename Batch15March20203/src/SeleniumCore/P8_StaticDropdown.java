@@ -21,16 +21,12 @@ public class P8_StaticDropdown {
 
 		// Step - 2 Create Object of chromedriver and refer it by webdriver reference variable 
 		 driver = new ChromeDriver();
-		 
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
-		 
-		 
 		 //Step - 3 Visit a WebPage 
 		 driver.get("https://mbasic.facebook.com/reg/?cid=103&refsrc=deprecated&_rdr");
 		 Thread.sleep(3000);
 		
-		 
 		//Step-4 
 		//Locate the Year Dropdown
 		 WebElement yearTab = driver.findElement(By.id("year"));
@@ -42,7 +38,6 @@ public class P8_StaticDropdown {
 		WebElement dayTab = driver.findElement(By.id("day"));
 		
 		//Step-5 Action -->  Create objcet of Select class pass the args & store in reference variable 
-		
 		Select year = new Select(yearTab);
 		Select month = new Select(monthTab);
 		Select day = new Select(dayTab);
@@ -51,9 +46,9 @@ public class P8_StaticDropdown {
 		month.selectByVisibleText("Jun");
 		day.selectByIndex(28);
 		
+		Thread.sleep(2500);
 		
-		
-		
+		driver.quit();
 		
 		 
 	}
