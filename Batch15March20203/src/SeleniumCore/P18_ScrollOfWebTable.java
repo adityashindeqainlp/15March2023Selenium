@@ -27,13 +27,16 @@ public class P18_ScrollOfWebTable {
 		// Step 2 Type Cast the driver to JavascriptExexcutor
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		// Step 3
+		// Step 3 Invoke Execute Script Method and provide script
+		// ("window.scrollBy(0,500)","")helps to scroll webpage
 
 		js.executeScript("window.scrollBy(0,500)", "");
-		
-	pending:	js.executeScript("document.querySelector('.tableFixHead').scrollTop(500)", "");
+
+		Thread.sleep(2500);
+
+		pending: js.executeScript("document.querySelector('.tableFixHead').scrollBy(0,100)", "");
 		Thread.sleep(5000);
-		
+
 		driver.quit();
 
 	}
