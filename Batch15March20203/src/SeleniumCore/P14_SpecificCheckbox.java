@@ -30,16 +30,12 @@ public class P14_SpecificCheckbox {
 
 		// Step - 4 Locate Check box and validate
 		WebElement checkbox = driver.findElement(By.id("checkBoxOption1"));
-
 		boolean check1 = checkbox.isDisplayed();
 		boolean check2 = checkbox.isEnabled();
 
 		if (check1 == true && check2 == true) {
-
 			System.out.println("Eanbled and Displayed");
-
 			checkbox.click();
-
 			boolean check3 = checkbox.isSelected();
 
 			if (check3 == true) {

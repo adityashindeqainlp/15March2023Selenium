@@ -29,9 +29,7 @@ public class P15_AllCheckBoxSelection {
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		Thread.sleep(3000);
 
-		// Step - 4 Find common locator for all check box and then perform click
-		// opration
-
+		// Step - 4 Find common locator for all check box and then perform click operation
 		List<WebElement> checkboxes = driver.findElements(By.xpath("//*[@type=\"checkbox\"]"));
 
 		for (WebElement checkbox : checkboxes) {
@@ -41,17 +39,13 @@ public class P15_AllCheckBoxSelection {
 				checkbox.click();
 
 				if (checkbox.isSelected() == true) {
-
 					System.out.println("Testcase is pass");
 				}
-
 			} else {
-
 				System.out.println("Testcase is failed");
 			}
 		}
 		Thread.sleep(5000);
 		driver.quit();
-
 	}
 }

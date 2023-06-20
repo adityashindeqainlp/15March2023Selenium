@@ -38,9 +38,6 @@ public class P20_WindowHandle2_0 {
 			System.out.println(id);
 		}
 		
-		
-		
-
 		// Step 4 Iterate over all set of window ids and place it inside Iterate class
 		// reference variable
 		Iterator<String> it = ids.iterator();

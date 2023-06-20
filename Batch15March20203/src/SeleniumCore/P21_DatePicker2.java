@@ -14,47 +14,35 @@ public class P21_DatePicker2 {
 	public static WebDriver driver;
 
 	public void selectPrev20Years(String year, int clicks) throws InterruptedException {
-
 		for (int i = 1; i <= clicks; i++) {
 			List<WebElement> ls = driver.findElements(By.xpath("//*[@title=\"Change the year\"]//option"));
 			Thread.sleep(5000);
-
 			ls.get(0).click();
 		}
 		selectYear(year);
-
 	}
 
 	public void selectYear(String year) {
-
 		WebElement yearsTab = driver.findElement(By.xpath("//*[@title='Change the year']"));
 		Select yearsSelction = new Select(yearsTab);
 		yearsSelction.selectByVisibleText(year);
-
 	}
 
 	public void selectMonth(String month) {
-
 		WebElement monthTab = driver.findElement(By.xpath("//select[@title='Change the month']"));
 		Select mt = new Select(monthTab);
 		mt.selectByVisibleText(month);
 	}
 
 	public void selectDay(String day) {
-
 		List<WebElement> days = driver.findElements(By.xpath("//tbody//tr//td//a"));
 		for (WebElement dt : days) {
-
 			if (dt.getText().equalsIgnoreCase(day)) {
-
 				dt.click();
 			}
 		}
-
 	}
-
 	public void clickOnCalender() {
-
 		driver.findElement(By.xpath("//input[@id='datepicker2']")).click();
 	}
 
@@ -65,7 +53,6 @@ public class P21_DatePicker2 {
 		selectPrev20Years(year, clicks);
 		selectMonth(month);
 		selectDay(day);
-
 	}
 
 	public static void main(String[] args) throws InterruptedException {
@@ -80,7 +67,7 @@ public class P21_DatePicker2 {
 		driver.get("https://demo.automationtesting.in/Datepicker.html");
 
 		P21_DatePicker2 dob = new P21_DatePicker2();
-		dob.dateSelection("1950", "May", "21", 4);
+		dob.dateSelection("1996", "June", "29", 1);
 		Thread.sleep(5000);
 		driver.quit();
 

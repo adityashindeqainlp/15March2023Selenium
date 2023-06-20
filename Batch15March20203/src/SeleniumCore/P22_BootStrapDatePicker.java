@@ -13,37 +13,23 @@ public class P22_BootStrapDatePicker {
 	public static WebDriver driver;
 
 	public void selectDate(String monthYear, String day) throws InterruptedException {
-
 		driver.findElement(By.id("datepicker1")).click();
 		Thread.sleep(5000);
-
 		int i = 0;
-
 		while (i == 0) {
-
 			String mtyr = driver.findElement(By.xpath("//*[@class=\"ui-datepicker-title\"]")).getText();
-
 			if (!(mtyr.equalsIgnoreCase(monthYear))) {
-
 				driver.findElement(By.xpath("//*[@class=\"ui-icon ui-icon-circle-triangle-w\"]")).click();
-
 			} else {
-
 				break;
 			}
-
 		}
-
 		List<WebElement> days = driver.findElements(By.xpath("//tbody//tr//td//a"));
-
 		for (WebElement dt : days) {
 			if (dt.getText().equalsIgnoreCase(day)) {
-
 				dt.click();
 			}
-
 		}
-
 	}
 
 	public static void main(String[] args) throws InterruptedException {
@@ -59,6 +45,9 @@ public class P22_BootStrapDatePicker {
 
 		P22_BootStrapDatePicker obj = new P22_BootStrapDatePicker();
 		obj.selectDate("June 1996", "29");
+		
+		Thread.sleep(3500);
+		driver.quit();
 
 	}
 

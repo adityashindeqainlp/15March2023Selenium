@@ -27,41 +27,25 @@ public class P19_windowHandles {
 
 		// Step 2 use Get Window Handle Method and get Window Id 
 		String id1 = driver.getWindowHandle();
-
 		System.out.println(id1);
 		Thread.sleep(2500);
 
 		// Locate the link and click on it
-
 		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
 		Thread.sleep(5000);
-
-	
-		
 		Set <String> ids = driver.getWindowHandles();
 		for(String id : ids) {
-			
 			System.out.println(id);
-			
 			if(id1.equalsIgnoreCase(id)) {
-				
 				driver.switchTo().window(id);
 				driver.findElement(By.name("username")).sendKeys("Admin");
 				driver.findElement(By.name("password")).sendKeys("admin123");
 				driver.findElement(By.xpath("//*[@type=\"submit\"]")).click();
 			}
-			
 		}
-		
 		String title = driver.getTitle();
 		System.out.println(title);
-		
 		Thread.sleep(5000);
-		
-		
-
 		driver.quit();
-
 	}
-
 }

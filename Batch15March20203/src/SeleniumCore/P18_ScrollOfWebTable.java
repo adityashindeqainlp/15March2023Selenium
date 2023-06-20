@@ -31,12 +31,9 @@ public class P18_ScrollOfWebTable {
 		// ("window.scrollBy(0,500)","")helps to scroll webpage
 
 		js.executeScript("window.scrollBy(0,500)", "");
-
 		Thread.sleep(2500);
-
 		pending: js.executeScript("document.querySelector('.tableFixHead').scrollBy(0,100)", "");
 		Thread.sleep(5000);
-
 		driver.quit();
 
 	}
