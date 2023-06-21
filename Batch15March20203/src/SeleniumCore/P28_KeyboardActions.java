@@ -15,7 +15,7 @@ public class P28_KeyboardActions {
 
 	public static Actions act;
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException  {
 		// TODO Auto-generated method stub
 
 		// Step 1 Launch the browser and hit URL
