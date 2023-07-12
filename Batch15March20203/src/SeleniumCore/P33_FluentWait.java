@@ -38,6 +38,5 @@ public class P33_FluentWait {
 
 		wait.until(ExpectedConditions.alertIsPresent());
 		driver.switchTo().alert().accept();
-
 	}
 }

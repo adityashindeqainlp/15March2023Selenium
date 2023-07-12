@@ -13,8 +13,6 @@ import org.openqa.selenium.interactions.Actions;
  **/
 public class P31_ImplicitWait {
 
-	// https://chercher.tech/practice/implicit-wait-example
-
 	public static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException, IOException {
