@@ -46,7 +46,7 @@ public class P22_BootStrapDatePicker {
 		P22_BootStrapDatePicker obj = new P22_BootStrapDatePicker();
 		obj.selectDate("June 1996", "29");
 		
-		Thread.sleep(3500);
+		Thread.sleep(5000);
 		driver.quit();
 
 	}
